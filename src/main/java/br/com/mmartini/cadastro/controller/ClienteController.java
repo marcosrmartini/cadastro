@@ -4,7 +4,8 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -27,7 +28,7 @@ import br.com.mmartini.cadastro.service.ClienteService;
 @RequestMapping(value = "/cliente")
 public class ClienteController {
 
-	private static final Logger log = Logger.getLogger(ClienteController.class);
+	private static final Logger log = LoggerFactory.getLogger(ClienteController.class);
 
 	@Autowired
 	private ClienteService service;
